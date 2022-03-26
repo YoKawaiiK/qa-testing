@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "strict": true,
+    "module": "commonjs",
+    "sourceMap": true,
+    "noEmit": true
+  }
+}
