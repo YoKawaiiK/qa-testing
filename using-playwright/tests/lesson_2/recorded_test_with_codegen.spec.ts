@@ -4,8 +4,19 @@ import { chromium } from "playwright";
 
 describe("Recorded test with codegen", () => {
   test("test", async () => {
-    const browser = await chromium.launch({headless: false});
-    const context = await browser.newContext();
+
+    console.log(test);
+
+    const browser = await chromium.launch({ headless: false });
+    const context = await browser.newContext({
+      recordVideo: {
+        dir: "./tests/videos/",
+        size: {
+          width: 800,
+          height: 600,
+        },
+      },
+    });
     const page = await context.newPage();
 
     await page.goto("https://letcode.in/forms");
