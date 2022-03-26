@@ -38,7 +38,4 @@ describe("Handling different types of inputs", () => {
     const clearMe = page.locator("input#clearMe");
     await clearMe.fill("");
   });
-
-  
-
 });
