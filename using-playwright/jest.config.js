@@ -9,7 +9,7 @@ module.exports = {
     "jest-playwright": {
       //  browsers: [ "chromium", "firefox"],
       launchOptions: {
-        //headless: false,
+        // headless: false,
         // slowMo: 600,
       },
     },
