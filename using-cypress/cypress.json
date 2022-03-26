@@ -1,0 +1,8 @@
+{
+  "ignoreExtraArrayItems": false,
+  "normalizeJson": true,
+  "replace": {
+    "key": "value"
+  },
+  "ignoreTestFiles": ["**/1-getting-started/*", "**/2-advanced-examples/*"]
+}
