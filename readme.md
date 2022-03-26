@@ -1,0 +1,1 @@
+# Learning use technologies in QA testing
