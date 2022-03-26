@@ -10,7 +10,7 @@ describe("Recorded test with codegen", () => {
     const browser = await chromium.launch({ headless: false });
     const context = await browser.newContext({
       recordVideo: {
-        dir: "./tests/videos/",
+        dir: "./playwright/videos/",
         size: {
           width: 800,
           height: 600,
