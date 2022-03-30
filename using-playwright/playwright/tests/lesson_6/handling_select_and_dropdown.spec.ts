@@ -11,11 +11,11 @@ describe("Handling select and dropdown", () => {
     await page.goto("https://letcode.in/dropdowns");
   });
 
-  // afterAll(async () => {
-  //   await page.close();
-  //   await ctx.close();
-  //   await browser.close();
-  // });
+  afterAll(async () => {
+    await page.close();
+    await ctx.close();
+    await browser.close();
+  });
 
   test("Case #1: Select a dropdown based on value", async () => {
     const fruits = await page.$("#fruits");
