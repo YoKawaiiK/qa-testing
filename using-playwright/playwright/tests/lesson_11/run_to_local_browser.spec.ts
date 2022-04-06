@@ -24,5 +24,5 @@ describe("How to run in local browser", () => {
   //     await browser.close();
   //   });
 
-  test("Case 1: just run browser", async (el) => {});
+  test("Case 1: just run browser", async () => {});
 });
