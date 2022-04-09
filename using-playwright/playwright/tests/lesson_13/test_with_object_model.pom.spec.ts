@@ -1,11 +1,10 @@
-import common = require("mocha/lib/interfaces/common");
 import { Browser, BrowserContext, chromium, firefox, Page } from "playwright";
 import UrlTestConstants from "../../constants/url_constants";
 import CommonFunctions from "../../pages/Common.page";
 import HeaderPage from "../../pages/Header.page";
 import LoginPage from "../../pages/Login.page";
 
-import * as constantsFields from "./constants_fields";
+import * as loginCredential from "../../data/login_credential.json";
 
 describe("TC001: testing with POM", () => {
   let browser: Browser;
@@ -39,11 +38,11 @@ describe("TC001: testing with POM", () => {
     expect(page.url()).toBe(UrlTestConstants.baseUrl);
     await headerPage.clickLoginLink();
     expect(page.url()).toBe(UrlTestConstants.loginUrl);
-    await loginPage.enterUserName(constantsFields.EMAIL);
-    await loginPage.enterUserPassword(constantsFields.PASSWORD);
+    await loginPage.enterUserName(loginCredential.email);
+    await loginPage.enterUserPassword(loginCredential.password);
     await loginPage.clickLoginBtn();
 
-    const toast = await commonFunctions.toast;
+    const toast = await commonFunctions.toast();
 
     expect(await toast?.textContent()).toContain("Welcome");
     await headerPage.clickSignOutLink();
@@ -51,7 +50,7 @@ describe("TC001: testing with POM", () => {
   });
 
   test("Case #2: login positive again, short test body", async () => {
-    await loginPage.login(constantsFields.EMAIL, constantsFields.PASSWORD);
+    await loginPage.login(loginCredential.email, loginCredential.password);
     expect(page.url()).toBe(UrlTestConstants.baseUrl);
   });
 });

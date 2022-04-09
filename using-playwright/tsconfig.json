@@ -4,6 +4,7 @@
     "strict": true,
     "module": "commonjs",
     "sourceMap": true,
-    "noEmit": true
+    "noEmit": true,
+    "resolveJsonModule": true
   }
 }

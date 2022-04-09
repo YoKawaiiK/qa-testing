@@ -8,13 +8,5 @@ export default class CommonFunctions {
   }
 
   // locators
-  public get toast() {
-    return this.page.waitForSelector("div[role='alertdialog']");
-  }
-
-  // methods
-
-  // public async verifyToastMessage() {
-
-  // }
+  toast = async () => await this.page.waitForSelector("div[role='alertdialog']");
 }
