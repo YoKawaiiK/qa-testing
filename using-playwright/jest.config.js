@@ -5,13 +5,4 @@ module.exports = {
     "^.+\\.(ts)$": "ts-jest",
   },
   testTimeout: 20000,
-  testEnvironmentOptions: {
-    "jest-playwright": {
-      //  browsers: [ "chromium", "firefox"],
-      launchOptions: {
-        // headless: false,
-        // slowMo: 600,
-      },
-    },
-  },
 };

@@ -1,4 +1,5 @@
 import { Page } from "playwright";
+import { parseCommandLine } from "typescript";
 
 export default class HeaderPage {
   private page: Page;
@@ -21,7 +22,13 @@ export default class HeaderPage {
 
   public async clickLoginLink() {
     const loginBtn = await this.loginBtn();
-    await loginBtn?.click({ force: true });
+    await Promise.all([
+      this.page.waitForNavigation(),
+      await loginBtn?.click({ force: true })
+    ])
+
+    
+    
   }
 
   public async clickSignOutLink() {
