@@ -28,13 +28,16 @@ const config: PlaywrightTestConfig = {
     //   { outputFile: "./playwright-report/test-result.json" },
     // ],
   ],
+
   use: {
+    // launchOptions: {
+    //   slowMo: 500,
+    // },
     actionTimeout: 0,
     trace: "on-first-retry",
     video: "retain-on-failure",
     channel: "chrome",
     screenshot: "only-on-failure",
-    
   },
   // testMatch: ["test", "spec"],
 
